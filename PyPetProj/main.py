@@ -16,7 +16,8 @@ print("Do you want to generate password? \n")
 time.sleep(0.5)
 
 answer = input("y/n: ")
-if answer == "y":
+tolower = answer.lower()
+if tolower == "y":
     print("Program initialized \n")
 else:
     print("And why you open password generator if u don't want to? \n")
@@ -32,7 +33,15 @@ def password_generator(lenght):
     password = ""
     print("Generating password \n")
     while len(password) < lenght:
-        password += random.choice(string.ascii_letters)
+        randomCasenum = random.randint(1, 4)
+        if randomCasenum == 1:  
+         password += random.choice(string.ascii_lowercase)
+        elif randomCasenum == 2:
+         password += random.choice(string.digits)
+        elif randomCasenum == 3:
+         password += random.choice(string.punctuation)
+        elif randomCasenum == 4:
+         password += random.choice(string.ascii_uppercase)
     return password
 
 def main(iterations):
