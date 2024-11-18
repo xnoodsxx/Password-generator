@@ -19,7 +19,7 @@ answer = input("y/n: ")
 if answer == "y":
     print("Program initialized \n")
 else:
-    print("Program finished \n")
+    print("And why you open password generator if u don't want to? \n")
     time.sleep(0.5)
     exit()
 print("Choose lenght of password \n")
