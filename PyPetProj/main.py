@@ -1,6 +1,7 @@
 import random
 import time
 import string
+import os
 
 print("Program started \n ")
 time.sleep(0.5) 
@@ -23,12 +24,14 @@ else:
     print("And why you open password generator if u don't want to? \n")
     time.sleep(0.5)
     exit()
+os.system('CLS')
 print("Choose lenght of password \n")
-lenght = int(input("Lenght of password: \n"))
+lenght = int(input("Lenght of password: "))
 time.sleep(0.5)
+print("\n")
 iterations = int(input("How many times do you want to generate password: \n"))
 time.sleep(0.5)
-
+os.system('CLS')
 def password_generator(lenght):
     password = ""
     print("Generating password \n")
